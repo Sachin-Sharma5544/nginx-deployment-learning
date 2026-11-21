@@ -1,18 +1,16 @@
 name: deploy
 
-on: 
-  push: 
-    branches: 
+on:
+  push:
+    branches:
       - main
 
-
-jobs: 
-  build: 
+jobs:
+  build:
     name: Build React Application
     runs-on: ubuntu-latest
 
-    steps: 
-      steps:
+    steps:
       - name: Checkout source code
         uses: actions/checkout@v4
 
@@ -35,9 +33,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: react-build
-          path: dist/  
+          path: dist/
 
-  # deploy: 
+  # deploy:
 
   #   needs: build
 
