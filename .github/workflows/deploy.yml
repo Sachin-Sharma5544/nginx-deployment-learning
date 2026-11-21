@@ -39,7 +39,7 @@ jobs:
     needs: build
 
     name: Deploy React Application
-    runs-on: self-hoisted
+    runs-on: self-hosted
 
     steps:
       - name: Download build artifact
